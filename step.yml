@@ -18,30 +18,20 @@ source_code_url: https://github.com/...
 support_url: https://github.com/.../issues
 host_os_tags:
   - osx-10.10
+  - linux
 project_type_tags:
-  - ios
 type_tags:
   - script
 is_requires_admin_user: true
 is_always_run: false
 is_skippable: false
-dependencies:
-  - manager: brew
-    name: git
 run_if: ""
 inputs:
-  - example_step_input: Default Value - you can leave this empty if you want to
+  - test_package_name:
     opts:
-      title: "Example Step Input"
-      summary: Summary. No more than 2-3 sentences.
-      description: |
-        Description of this input.
-
-        Can be Markdown formatted text.
-      is_expand: false
+      title: "Test Package Name"
+      summary: Name of zip file to create.
       is_required: true
-      is_dont_change_value: true
-      value_options: []
 outputs:
   - EXAMPLE_STEP_OUTPUT:
     opts:
