@@ -5,25 +5,17 @@ workflows:
   test:
     steps:
     - change-workdir:
-        title: Switch working dir to test / _tmp dir
+        title: Switching working dir to impa
         description: |-
-          To prevent step testing issues, like referencing relative
-          files with just './some-file' in the step's code, which would
-          work for testing the step from this directory directly
-          but would break if the step is included in another `bitrise.yml`.
+            This is designed to be run next to impa repo for testing
         run_if: true
         inputs:
-        - path: ./_tmp
-        - is_create_path: true
+        - path: ../impa
+        - is_create_path: false
     - path::./:
-        title: Step Test
-        description: |-
-          The example input has a default value,
-          you can overwrite it if you want to, just like we did below,
-          but the step would use the default value specified in the `step.yml`
-          file if you would not specify another value.
+        title: Package tests
         inputs:
-        - example_step_input: Example Step Input's value
+        - test_package_name: test_bundle.zip
 
 
   # ----------------------------------------------------------------

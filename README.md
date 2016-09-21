@@ -1,7 +1,6 @@
-# My Awesome Step
+# Appium Pytest-BDD Test Packager
 
-My Awesome Step is a solid starting code base for
-a new Step.
+This bitrise step is designed to package impa into a form usable by AWS device farm.
 
 
 ## How to use this Step
