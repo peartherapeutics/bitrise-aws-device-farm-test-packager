@@ -100,6 +100,7 @@ set -o nounset
 test_package_name="test_bundle.zip"
 zip -r "$test_package_name" wheelhouse/ requirements.txt -x *macosx*
 pwd
+ls -la
 pushd mobile/reSET
 # TODO make zip filter configurable
 zip -r "../$test_package_name" tests/features/ tests/fixtures/ tests/functional/conftest.py tests/functional/__init__.py tests/functional/smoke_test.py tests/functional/moduleClassGuidedPath.py
